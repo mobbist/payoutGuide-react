@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/favicon.ico" />
+    <script type="text/javascript" src="/html2canvas.min.js"></script>
+    <script type="text/javascript" src="/jspdf.debug.js"></script>
+    <script>
+
+
+        function downLoadPDF() {
+            html2canvas(document.body, {
+                onrendered: function (canvas) {
+                    var contentWidth = canvas.width;
+                    var contentHeight = canvas.height;
+                    var pageHeight = contentWidth / 592.28 * 841.89;
+                    var leftHeight = contentHeight;
+                    var position = 100;
+                    var imgWidth = 595.28;
+                    var imgHeight = 592.28 / contentWidth * contentHeight;
+                    var pageData = canvas.toDataURL("data:image/png;");
+                    var pdf = new jsPDF('', 'pt', 'a4');
+                    if (leftHeight < pageHeight) {
+                        pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                    } else {
+                        while (leftHeight > 0) {
+                            pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+                            leftHeight -= pageHeight;
+                            position -= 841.89;
+                            if (leftHeight > 0) {
+                                pdf.addPage();
+                            }
+                        }
+                    }
+                    pdf.save('content.pdf');
+                }
+            })
+        }
+    </script>
+    <title>payoutGuide</title>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+
+</html>

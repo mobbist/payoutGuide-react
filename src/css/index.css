@@ -1,0 +1,41 @@
+*{ margin:0px; padding:0px; }
+html,body,#app{  font-family: "arial"}
+select{ border: solid 1px #000;-moz-appearance:none;-webkit-appearance:none;}
+header{ position: relative; width:100%; height:85px; background:url(../images/awx.png) 10px 28px no-repeat #fff; background-size: 360px 70px; font-size:24px; padding-top: 45px;   color: #333; font-weight: bold  }
+header h1{ padding-left: 380px; font-weight: initial; font-size:36px;}
+.topRight{ position: absolute; right:0px; top:0px; background-color: #fff; height:75px; padding-top: 55px; width:150px; }
+header .language{ font-size:24px; cursor: pointer;  color:#a7a7a7; font-weight: initial; padding-left: 20px; }
+header .downloadPDF{  font-size:24px; cursor: pointer; color:#a7a7a7; font-weight: initial;padding-left: 20px; padding:5px; border:1px solid #a7a7a7; border-radius: 5px;}
+/* container */
+.container{  overflow: hidden; }
+.leftContaier{  width:300px;overflow-y:scroll;   background: #EF584C; color: #fff; font-family: "sathu"; position: absolute;  left:0px; top:140px;  bottom:0px;   }
+
+
+.countryList ul{ padding-bottom:140px; }
+.countryList li{ height:75px; border-bottom: 2px solid #fff;  line-height: 75px; font-size:22px; cursor: pointer; text-align: center   }
+.leftContaier .hover{ border-right:5px solid #f8ba00; }
+.leftContaier .selectInput{ height:50px; padding-left:20px; padding-top:10px; overflow-y: scroll }
+.leftContaier .selectInput input{ width:190px; height:42px; padding-left:5px; outline: none; font-size:16px; border-radius: 5px;   }   
+
+.rightContainer{ position: absolute;   left:320px; top:140px; right:0px; bottom:0px; overflow-y: auto }
+.rePDF{position:initial; }
+.rightTopContainer{ background-color: #f5f5f5}
+.countryTitle { display: flex;font-size:30px;   font-weight: bold; line-height: 1.5em; padding-top:20px; padding-left:20px;   }
+.modelStyle { margin-top:20px; padding-bottom: 20px;  min-height:150px;  font-size:14px;width:100%; display: flex; }
+.modelStyle .lineBox{ width:50%; }
+.modelStyle .line{ min-height: 40px; line-height: 40px; font-size:16px; color:#929292; font-weight: bold; display: flex; }
+.modelStyle .line .title{ width:220px; padding-left:20px; }
+.modelStyle .line  p{width:300px; min-height: 30px;}
+.modelStyle select{ width:210px; height:30px; line-height: 30px;font-size:16px; padding-left: 10px; color:#929292; border:1px solid #929292;}
+.modelStyle .value{ font-weight: initial; }
+.customSelect{ width:210px; height:40px; background-color: #bbb; color: #fff; line-height: 40px; padding-left: 10px; cursor: pointer;  }
+.modelStyle .infoRight{ margin-left:100px;}
+.modelStyle .line1 .p1{ color:#929292; font-family: "arial";font-weight:initial }
+.infoCode{padding-top: 60px;}
+.infoCode table{ width:100%;border-collapse:collapse}
+.infoCode table thead tr{ height:70px; background-color: #d5d5d5;  }
+.infoCode table thead tr th{ border:0px; text-align: left; padding-left: 15px;}
+.infoCode td { text-align:left; height: 40px; padding-left:15px; width:33%;}
+.infoCode  .tableTitle{text-align:center; height: 35px; background-color: #f7b92b; color:#fff; }
+.bgloading{position: fixed; left: 0px; right: 0px; bottom: 0px; top:0px;  background: url("../images/loading.png") no-repeat center center #fff; opacity: 0.7 }
+
